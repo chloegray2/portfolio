@@ -39,7 +39,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex justify-between items-center h-20">
             <a href="#home" className="font-serif text-2xl hover:opacity-70 transition-opacity">
-              chloe<span style={{ color: colors.pink }}>.</span>
+              chloe<span style={{ color: colors.pink }}></span>
             </a>
             <div className="hidden md:flex items-center gap-8">
               {['About', 'Work', 'Projects', 'Contact'].map((item) => (
@@ -84,12 +84,12 @@ function App() {
                   style={{ backgroundColor: colors.pink }}
                 />
                 <span className="text-sm font-medium" style={{ color: colors.pink }}>
-                  Open to opportunities
+                  Starting Master's at LSU — Jan 2026
                 </span>
               </div>
               
               <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.1] mb-6">
-                Hey, I'm Chloe
+                Hi! I'm Chloe
                 <span style={{ color: colors.pink }}>—</span><br />
                 full-stack developer<br />
                 & ML engineer<span style={{ color: colors.pink }}>.</span>
@@ -333,107 +333,116 @@ function App() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* FiscalFocus - Featured */}
-            <div 
-              className="md:col-span-2 rounded-3xl p-8 md:p-12 relative overflow-hidden"
-              style={{ background: `linear-gradient(135deg, ${colors.pinkLight}, ${colors.peach}, ${colors.lavender})` }}
+            <div
+              className="md:col-span-2 rounded-3xl overflow-hidden bg-white"
             >
-              <div 
-                className="absolute top-0 right-0 w-64 h-64 rounded-full blur-3xl opacity-30"
-                style={{ backgroundColor: colors.pink }}
-              />
-              <div className="relative">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span 
-                    className="px-3 py-1 text-white text-xs font-medium rounded-full"
-                    style={{ backgroundColor: colors.pink }}
-                  >
-                    1st Place
-                  </span>
-                  <span 
-                    className="px-3 py-1 text-white text-xs font-medium rounded-full"
-                    style={{ backgroundColor: colors.charcoal }}
-                  >
-                    Best Technical
-                  </span>
+              <div className="grid md:grid-cols-[1fr,1.2fr] gap-0">
+                {/* Image side */}
+                <div className="relative h-64 md:h-auto">
+                  <img
+                    src="/hackathon1.jpeg"
+                    alt="FiscalFocus Hackathon"
+                    className="w-full h-full object-cover"
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: `linear-gradient(to bottom, transparent 0%, ${colors.pink}15 100%)` }}
+                  />
                 </div>
-                <h3 className="font-serif text-3xl mb-2">FiscalFocus</h3>
-                <p className="opacity-60 mb-4">GeauxCash Hackathon · March 2025</p>
-                <p className="opacity-70 leading-relaxed mb-6 max-w-2xl">
-                  Financial analysis platform with ML-powered stock prediction, risk assessment, 
-                  and goal tracking. Built in 48 hours, won first place out of 180+ participants. 
-                  Integrated SEC filings and real-time market data.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {['Python', 'React', 'ML', 'SEC Data', 'REST APIs'].map(tag => (
-                    <span 
-                      key={tag} 
-                      className="px-3 py-1.5 text-sm rounded-full"
-                      style={{ backgroundColor: 'rgba(255,255,255,0.6)', color: `${colors.charcoal}aa` }}
+
+                {/* Content side */}
+                <div
+                  className="p-8 md:p-12 relative"
+                  style={{ background: `linear-gradient(135deg, ${colors.pinkLight}, ${colors.peach})` }}
+                >
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span
+                      className="px-3 py-1 text-white text-xs font-medium rounded-full"
+                      style={{ backgroundColor: colors.pink }}
                     >
-                      {tag}
+                      1st Place
                     </span>
-                  ))}
+                    <span
+                      className="px-3 py-1 text-white text-xs font-medium rounded-full"
+                      style={{ backgroundColor: colors.charcoal }}
+                    >
+                      Best Technical
+                    </span>
+                  </div>
+                  <h3 className="font-serif text-3xl mb-2">FiscalFocus</h3>
+                  <p className="opacity-60 mb-4">GeauxCash Hackathon · March 2025</p>
+                  <p className="opacity-70 leading-relaxed mb-6">
+                    Financial analysis platform with ML-powered stock prediction, risk assessment,
+                    and goal tracking. Built in 48 hours, won first place out of 180+ participants.
+                    Integrated SEC filings and real-time market data.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {['Python', 'React', 'ML', 'SEC Data', 'REST APIs'].map(tag => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1.5 text-sm rounded-full"
+                        style={{ backgroundColor: 'rgba(255,255,255,0.6)', color: `${colors.charcoal}aa` }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Other projects */}
-            {[
-              {
-                title: 'CarbonSight',
-                subtitle: 'Nexus LA DevDays Finalist',
-                date: 'Aug — Dec 2025',
-                desc: 'Environmental compliance dashboard integrating Climate TRACE satellite data. Built 3 specialized portals with an AI recommendation engine.',
-                tags: ['Climate Data', 'Dashboard', 'AI'],
-                bg: colors.mint,
-                accent: colors.teal
-              },
-              {
-                title: 'Where-to-Start',
-                subtitle: 'Team Lead',
-                date: 'Aug — Dec 2024',
-                desc: 'Led a team of 4 to build a responsive fitness web app. Managed sprints, handled code reviews, and coordinated deliverables.',
-                tags: ['React', 'Firebase', 'Agile'],
-                bg: colors.lavender,
-                accent: colors.purple
-              },
-              {
-                title: 'Music Genre Classifier',
-                subtitle: '89% Accuracy',
-                date: 'Aug — Dec 2024',
-                desc: 'ML model classifying music genres from audio features. Compared CNN (55%) vs Random Forest (89%) approaches on the GTZAN dataset.',
-                tags: ['CNN', 'Random Forest', 'GTZAN'],
-                bg: colors.peach,
-                accent: colors.orange
-              }
-            ].map((project, i) => (
-              <div 
-                key={i} 
-                className="rounded-3xl p-8"
-                style={{ backgroundColor: project.bg }}
-              >
-                <p 
-                  className="text-sm font-medium mb-2"
-                  style={{ color: project.accent }}
+            {/* CarbonSight - Featured */}
+            <div className="md:col-span-2 rounded-3xl overflow-hidden bg-white">
+              <div className="grid md:grid-cols-[1.2fr,1fr] gap-0">
+                {/* Image side */}
+                <div className="relative h-80 md:h-auto">
+                  <img
+                    src="/nexus1.jpeg"
+                    alt="CarbonSight Project"
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: 'center 22%' }}
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: `linear-gradient(to bottom, transparent 0%, ${colors.mint}30 100%)` }}
+                  />
+                </div>
+
+                {/* Content side */}
+                <div
+                  className="p-8 md:p-12 relative"
+                  style={{ background: `linear-gradient(135deg, ${colors.mint}, #b8e6d5)` }}
                 >
-                  {project.subtitle}
-                </p>
-                <h3 className="font-serif text-2xl mb-1">{project.title}</h3>
-                <p className="text-sm opacity-50 mb-4">{project.date}</p>
-                <p className="opacity-70 leading-relaxed mb-6">{project.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map(tag => (
-                    <span 
-                      key={tag} 
-                      className="px-3 py-1.5 text-sm rounded-full"
-                      style={{ backgroundColor: 'rgba(255,255,255,0.6)', color: `${colors.charcoal}99` }}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span
+                      className="px-3 py-1 text-white text-xs font-medium rounded-full"
+                      style={{ backgroundColor: colors.teal }}
                     >
-                      {tag}
+                      Finalist
                     </span>
-                  ))}
+                  </div>
+                  <h3 className="font-serif text-3xl mb-2">CarbonSight</h3>
+                  <p className="opacity-60 mb-4">Nexus LA DevDays · Aug — Dec 2025</p>
+                  <p className="opacity-70 leading-relaxed mb-6">
+                    Environmental compliance dashboard integrating Climate TRACE satellite data.
+                    Built 3 specialized portals (company, public, and regulator dashboards) with
+                    an AI recommendation engine for sustainability initiatives. Advanced to competition
+                    finals with live demo and compliance monitoring system.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {['Climate Data', 'Multi-Portal Dashboard', 'AI Recommendations', 'Compliance Tracking'].map(tag => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1.5 text-sm rounded-full"
+                        style={{ backgroundColor: 'rgba(255,255,255,0.6)', color: `${colors.charcoal}aa` }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -498,8 +507,8 @@ function App() {
               Let's connect
             </h2>
             <p className="text-white/60 text-lg mb-10">
-              I'm looking for full-time opportunities starting January 2026. 
-              Feel free to reach out about roles, projects, or just to say hi.
+              I'm starting my Master's in Computer Science at LSU in January 2026.
+              Feel free to reach out about research, projects, or just to say hi.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-12">
