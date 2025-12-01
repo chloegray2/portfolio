@@ -133,11 +133,11 @@ function App() {
             
             {/* Avatar card */}
             <div className="hidden lg:block relative">
-              <div 
+              <div
                 className="w-72 h-72 rounded-[48px] rotate-6 shadow-2xl"
                 style={{ background: `linear-gradient(135deg, ${colors.pink}, #ffd4b8, #e2d4f0)` }}
               />
-              <div 
+              <div
                 className="absolute inset-3 rounded-[40px] -rotate-3 flex items-center justify-center shadow-inner"
                 style={{ backgroundColor: colors.cream }}
               >
@@ -153,7 +153,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <span 
+              <span
                 className="font-medium text-sm tracking-wider uppercase"
                 style={{ color: colors.pink }}
               >
@@ -203,7 +203,7 @@ function App() {
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: '4x', label: "Dean's List", bg: colors.pinkLight, color: colors.pink },
+                  { value: '8x', label: "Dean's List", bg: colors.pinkLight, color: colors.pink },
                   { value: '1st', label: 'Place Hackathon', bg: colors.lavender, color: colors.purple },
                   { value: '1000+', label: 'Platform Users', bg: colors.peach, color: colors.orange },
                   { value: '10K+', label: 'Data Points Analyzed', bg: colors.mint, color: colors.teal },
@@ -226,7 +226,7 @@ function App() {
       {/* Experience Section */}
       <section id="work" className="py-24" style={{ backgroundColor: colors.cream }}>
         <div className="max-w-6xl mx-auto px-6">
-          <span 
+          <span
             className="font-medium text-sm tracking-wider uppercase"
             style={{ color: colors.pink }}
           >
@@ -321,7 +321,7 @@ function App() {
       {/* Projects Section */}
       <section id="projects" className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <span 
+          <span
             className="font-medium text-sm tracking-wider uppercase"
             style={{ color: colors.pink }}
           >
@@ -340,7 +340,7 @@ function App() {
                 {/* Image side */}
                 <div className="relative h-64 md:h-auto">
                   <img
-                    src="/hackathon1.jpeg"
+                    src={import.meta.env.BASE_URL + "hackathon1.jpeg"}
                     alt="FiscalFocus Hackathon"
                     className="w-full h-full object-cover"
                   />
@@ -397,7 +397,7 @@ function App() {
                 {/* Image side */}
                 <div className="relative h-80 md:h-auto">
                   <img
-                    src="/nexus1.jpeg"
+                    src={import.meta.env.BASE_URL + "nexus1.jpeg"}
                     alt="CarbonSight Project"
                     className="w-full h-full object-cover"
                     style={{ objectPosition: 'center 22%' }}
@@ -450,7 +450,7 @@ function App() {
       {/* Skills Section */}
       <section className="py-24" style={{ backgroundColor: colors.cream }}>
         <div className="max-w-6xl mx-auto px-6">
-          <span 
+          <span
             className="font-medium text-sm tracking-wider uppercase"
             style={{ color: colors.pink }}
           >
@@ -497,7 +497,7 @@ function App() {
         
         <div className="max-w-6xl mx-auto px-6 relative">
           <div className="max-w-2xl">
-            <span 
+            <span
               className="font-medium text-sm tracking-wider uppercase"
               style={{ color: colors.pink }}
             >
