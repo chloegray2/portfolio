@@ -227,9 +227,9 @@ function App() {
             </div>
             
             {/* Avatar card with photo carousel */}
-            <div className="hidden lg:block relative group">
+            <div className="relative group mx-auto lg:mx-0">
               <div
-                className="w-72 h-72 rounded-[48px] rotate-6 shadow-2xl"
+                className="w-64 h-64 sm:w-72 sm:h-72 rounded-[48px] rotate-6 shadow-2xl"
                 style={{ background: `linear-gradient(135deg, ${colors.pink}, ${darkMode ? '#5a3d28' : '#ffd4b8'}, ${darkMode ? '#4a3d5a' : '#e2d4f0'})` }}
               />
               <div
